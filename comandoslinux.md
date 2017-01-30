@@ -19,8 +19,30 @@ lspci -tv: mostrar los dispositivos PCI.
 lsusb -tv: mostrar los dispositivos USB.  
 date: mostrar la fecha del sistema.  
 cal 2011: mostrar el almanaque de 2011.  
-cal 07 2011: mostrar el almanaque para el mes julio de 2011.  
-date 041217002011.00: colocar (declarar, ajustar) fecha y hora.  
+cal 07 2011: mostrar el almanaque para el mes julio de 2011.  Muestra/Modifica fecha y hora.
+
+Su estructura es: date {mmddhhmiyyyy.ss}, donde:
+
+mm – Mes
+
+dd – Día
+
+hh – Hora en formato 24hs.
+
+mi – Minutos
+
+yyyy – Año
+
+ss – segundos
+
+Ejemplos de uso:
+
+date -s "01/31/2009 22:19:53" cambia la fecha y la hora.
+
+date +%T -s "22:19:53" cambia la hora.
+
+date --set "2007-05-27 17:27" cambia fecha y la hora. 
+
 clock -w: guardar los cambios de fecha en la BIOS.  
 ## Apagar (Reiniciar Sistema o Cerrar Sesión)  
 
