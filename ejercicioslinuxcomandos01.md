@@ -12,7 +12,7 @@ en C1.
 7. Listar todos los archivos, incluidos los ocultos, del directorio raíz.  
 8. Listar todos los archivos del directorio etc que no empiecen por t.  
 9. Listar todos los archivos del directorio usr y sus subdirectorios.  
-10. Cambiarse al directorio tmp.  
+10. Cambiarse al directorio tmp, crear directorio PRUEBA.
 11. Verificar que el directorio actual ha cambiado.  
 12. Mostrar el día y la hora actual.  
 13. Con un solo comando posicionarse en el directorio $HOME.  
