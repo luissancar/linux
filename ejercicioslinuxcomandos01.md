@@ -76,9 +76,7 @@ intentar de nuevo el paso anterior.
 48. Cambiar el directorio actual al directorio dir3. Imprimir su trayectoria
 completa para verificar el cambio.  
 49. ¿Cuáles son los permisos asignados en su momento a este directorio?
-50. Establecer mediante el comando umask (buscar este comando) los
-siguientes valores por omisión: rwxr--r-- para los directorios y rw-r--r-- para
-los archivos ordinarios.  
+50. Reiniciar el ordenador.
 51. Crear cuatro nuevos directorios llamados dira, dirb, dirc, y dird bajo el
 directorio actual.  
 52. Comprobar los permisos de acceso de los directorios recién creados para
