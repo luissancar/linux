@@ -69,13 +69,13 @@ nota esas 3 “r”s para los 3 diferentes tipos de permisos
 
 donde:
 
-x-------------x-------------x
+
 |  permisos   |  pertenece  |
-x-------------x-------------x
+
 |  rwx------  | usuario     |
 |  ---r-x---  | grupo       |
 |  ------r-x  | otros       |
-x-------------x-------------x
+
 
 podemos borrar permisos para cada dueño; supongamos que tenemos un archivo:
 
@@ -112,7 +112,6 @@ Ejecución tiene el valor de 1
 
 Entonces:
 
-x-----x-----x-----------------------------------x
 | rwx |  7  | Lectura, escritura y ejecución    |
 | rw- |  6  | Lectura, escritura        |
 | r-x |  5  | Lectura y ejecución       |
@@ -121,16 +120,13 @@ x-----x-----x-----------------------------------x
 | -w- |  2  | Escritura                         |
 | --x |  1  | Ejecución             |
 | --- |  0  | Sin permisos          |
-x-----x-----x-----------------------------------x
 
 Por lo tanto:
 
-x------------------------x-----------x
 |chmod u=rwx,g=rwx,o=rx  | chmod 775 | 
 |chmod u=rwx,g=rx,o=     | chmod 760 |
 |chmod u=rw,g=r,o=r      | chmod 644 |
 |chmod u=rw,g=r,o=       | chmod 640 |
 |chmod u=rw,go=          | chmod 600 |
 |chmod u=rwx,go=         | chmod 700 |
-x------------------------x-----------x
      
