@@ -70,11 +70,11 @@ nota esas 3 “r”s para los 3 diferentes tipos de permisos
 donde:
 
 
-|  permisos   |  pertenece  |
+|  permisos   |  pertenece  |  
 
-|  rwx------  | usuario     |
-|  ---r-x---  | grupo       |
-|  ------r-x  | otros       |
+|  rwx------  | usuario     |  
+|  ---r-x---  | grupo       |  
+|  ------r-x  | otros       |  
 
 
 podemos borrar permisos para cada dueño; supongamos que tenemos un archivo:
