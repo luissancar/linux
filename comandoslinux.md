@@ -541,7 +541,7 @@ Bien, supongamos que deseamos un listado de todos los usuarios normales (persona
 <tr><td>luis<td><td>Luis Hernandez</td><td>/bin/bash</td></tr>  
 El primer paso es determinar los usuarios normales del sistema, podríamos usar un grep "home" /etc/passw | gawk ..., pero podría haber usuarios que tengan su HOME en otra ubicación, además se trata de usar solo awk, asi que lo primero que entenderemos es que los campos obtenidos del resultado de un comando awk, se numeran por $1, $2, etc. y el delimitador de campos se indica mediante la variable "FS".  
 
-#> gawk '{print $3}' FS=":" /etc/passwd  
+> gawk '{print $3}' FS=":" /etc/passwd  
 0  
 1  
 2  
@@ -555,13 +555,13 @@ El primer paso es determinar los usuarios normales del sistema, podríamos usar 
 504  
 Podemos ver como seleccionamos el caracter separador FS=":", que viene de 'Field Separator', y tenemos indicada una acción '{print $3}', que significa imprime el campo 3. Aunque realmente no lo queremos imprimir, lo queremos evaluar, y si deseamos imprimir el $1, $5 y $7 que se mencionarion previamente, asi que agregamos una expresión de evaluación antes de la acción:  
 
-#> awk '$3 >= 500 {print $1 $5 $7 }' FS=":" /etc/passwd  
+> awk '$3 >= 500 {print $1 $5 $7 }' FS=":" /etc/passwd  
 sergonSergio Gonzalez/bin/bash  
 valeriaValeria Perez/bin/bash  
 
 Agregamos '$3 >= 500' previo a la acción (que es imprimir lo que deseamos). Nótese que los campos en el resultado salen pegados, es necesario agregar entre comillas " ", ya sea un espacio o lo que se desee, en este caso etiquetas de tablas de HTML y además ordenaremos "sort" los registros obtenidos:  
 
-#> awk  '$3 >= 500 {print "<tr><td>"$1"</td><td>"$5"</td><td>"$7"</td></tr>" | "sort" }' FS=":" /etc/passwd  
+> awk  '$3 >= 500 {print "<tr><td>"$1"</td><td>"$5"</td><td>"$7"</td></tr>" | "sort" }' FS=":" /etc/passwd  
 <tr><td>alejandra</td><td>Alejandra Lopez</td><td>/bin/nologin</td></tr>  
 <tr><td>fernanda</td><td>Fernanda Lozano</td><td>/bin/sh</td></tr>  
 <tr><td>luis</td><td>Luis Hernandez</td><td>/bin/bash</td></tr>  
