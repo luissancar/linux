@@ -527,5 +527,41 @@ Al igual que en los otros dos ejemplos de expresiones regulares uso las opciones
 En cuanto a la expresión regular:
 '([0-9]{1,3}\.){3}[0-9]{1,3}'
 ([0-9]{1,3}\.){3} Representa 3 bloques de entre uno y tres dígitos separados por puntos. Observemos que como el punto es un metacaracter, tengo que usar el caracter de escape \ para que no sea interpretado como un metacaracter, sino como un caracter normal.
-[0-9]{1,3} Representa el último bloque de la dirección IP, que está formado por un número de entre 1 y 3 dígitos.
+[0-9]{1,3} Representa el último bloque de la dirección IP, que está formado por un número de entre 1 y 3 dígitos.  
 
+
+# gawk  
+awk o la versión GNU gawk es más que un simple comando de procesamiento de patrones, es todo un lenguaje de análisis semántico.   
+
+Una línea típica de /etc/passwd es como la siguiente:  
+
+luis:x:504:504:Luis Hernandez:/home/luis:/bin/bash  
+Bien, supongamos que deseamos un listado de todos los usuarios normales (personas) del sistema, pero solo necesitamos su nombre de usuario, su nombre o real y su shell por defecto, es decir, si vemos la línea anterior, la separación entre campos es ":" asi que para nuestra consulta  queremos el campo 1,5 y 7. Pero además, esta consulta será parte de una tabla HTML, asi que deberiamos incluir las etquietas "<tr> y "<td> necesarias de una vez. Es decir, el resultado deseado es el siguiente:  
+
+<tr><td>luis<td><td>Luis Hernandez</td><td>/bin/bash</td></tr>  
+El primer paso es determinar los usuarios normales del sistema, podríamos usar un grep "home" /etc/passw | gawk ..., pero podría haber usuarios que tengan su HOME en otra ubicación, además se trata de usar solo awk, asi que lo primero que entenderemos es que los campos obtenidos del resultado de un comando awk, se numeran por $1, $2, etc. y el delimitador de campos se indica mediante la variable "FS".  
+
+#> gawk '{print $3}' FS=":" /etc/passwd  
+0  
+1  
+2  
+...  
+81  
+86  
+500  
+501  
+502  
+503  
+504  
+Podemos ver como seleccionamos el caracter separador FS=":", que viene de 'Field Separator', y tenemos indicada una acción '{print $3}', que significa imprime el campo 3. Aunque realmente no lo queremos imprimir, lo queremos evaluar, y si deseamos imprimir el $1, $5 y $7 que se mencionarion previamente, asi que agregamos una expresión de evaluación antes de la acción:  
+
+#> awk '$3 >= 500 {print $1 $5 $7 }' FS=":" /etc/passwd  
+sergonSergio Gonzalez/bin/bash  
+valeriaValeria Perez/bin/bash  
+
+Agregamos '$3 >= 500' previo a la acción (que es imprimir lo que deseamos). Nótese que los campos en el resultado salen pegados, es necesario agregar entre comillas " ", ya sea un espacio o lo que se desee, en este caso etiquetas de tablas de HTML y además ordenaremos "sort" los registros obtenidos:  
+
+#> awk  '$3 >= 500 {print "<tr><td>"$1"</td><td>"$5"</td><td>"$7"</td></tr>" | "sort" }' FS=":" /etc/passwd  
+<tr><td>alejandra</td><td>Alejandra Lopez</td><td>/bin/nologin</td></tr>  
+<tr><td>fernanda</td><td>Fernanda Lozano</td><td>/bin/sh</td></tr>  
+<tr><td>luis</td><td>Luis Hernandez</td><td>/bin/bash</td></tr>  
