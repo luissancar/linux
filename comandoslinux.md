@@ -178,7 +178,9 @@ gzip -9 file1: comprime con compresión máxima.
 rar a file1.rar test_file: crear un fichero rar llamado ‘file1.rar’.  
 rar a file1.rar file1 file2 dir1: comprimir ‘file1’, ‘file2’ y ‘dir1’ simultáneamente.  
 rar x file1.rar: descomprimir archivo rar.  
-unrar x file1.rar: descomprimir archivo rar.  Archivos .tar.gz:
+unrar x file1.rar: descomprimir archivo rar.  
+  
+Archivos .tar.gz:
 Comprimir: tar -czvf empaquetado.tar.gz /carpeta/a/empaquetar/  
 Descomprimir: tar -xzvf archivo.tar.gz  
   
