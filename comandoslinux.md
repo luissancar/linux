@@ -178,19 +178,23 @@ gzip -9 file1: comprime con compresión máxima.
 rar a file1.rar test_file: crear un fichero rar llamado ‘file1.rar’.  
 rar a file1.rar file1 file2 dir1: comprimir ‘file1’, ‘file2’ y ‘dir1’ simultáneamente.  
 rar x file1.rar: descomprimir archivo rar.  
-unrar x file1.rar: descomprimir archivo rar.  
-tar -cvf archive.tar file1: crear un tarball descomprimido.  
-tar -cvf archive.tar file1 file2 dir1: crear un archivo conteniendo ‘file1’, ‘file2′ y’dir1’.  
-tar -tf archive.tar: mostrar los contenidos de un archivo.  
-tar -xvf archive.tar: extraer un tarball.  
-tar -xvf archive.tar -C /tmp: extraer un tarball en / tmp.  
-tar -cvfj archive.tar.bz2 dir1: crear un tarball comprimido dentro de bzip2.  
-tar -xvfj archive.tar.bz2: descomprimir un archivo tar comprimido en bzip2  
-tar -cvfz archive.tar.gz dir1: crear un tarball comprimido en gzip.  
-tar -xvfz archive.tar.gz: descomprimir un archive tar comprimido en gzip.  
-zip file1.zip file1: crear un archivo comprimido en zip.  
-zip -r file1.zip file1 file2 dir1: comprimir, en zip, varios archivos y directorios de forma simultánea.  
-unzip file1.zip: descomprimir un archivo zip.
+unrar x file1.rar: descomprimir archivo rar.  Archivos .tar.gz:
+Comprimir: tar -czvf empaquetado.tar.gz /carpeta/a/empaquetar/  
+Descomprimir: tar -xzvf archivo.tar.gz  
+  
+Archivos .tar:  
+Empaquetar: tar -cvf paquete.tar /dir/a/comprimir/  
+Desempaquetar: tar -xvf paquete.tar  
+  
+Archivos .gz:  
+Comprimir: gzip -9 index.php  
+Descomprimir: gzip -d index.php.gz  
+  
+Archivos .zip:  
+Comprimir: zip archivo.zip carpeta  
+Descomprimir: unzip archivo.zip  
+  
+.
 Paquetes RPM (Red Hat, Fedora y similares)  
 
 rpm -ivh package.rpm: instalar un paquete rpm.  
