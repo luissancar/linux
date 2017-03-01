@@ -70,8 +70,10 @@ pc02.dam1.com. IN A 192.168.5.31
 www.dam1.com. IN CNAME servidor01.dam1.com. 
 pc05.dam1.com.	IN	A	192.168.5.25
 
-## ri.192.168.5
+~~~
 
+## ri.192.168.5
+~~~
 $TTL 38400
 
 @ IN SOA servidor01.dam1.com. correoadmin.dam1.com. (
