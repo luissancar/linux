@@ -180,9 +180,9 @@ rar a file1.rar file1 file2 dir1: comprimir ‘file1’, ‘file2’ y ‘dir1�
 rar x file1.rar: descomprimir archivo rar.  
 unrar x file1.rar: descomprimir archivo rar.  
   
-Archivos .tar.gz:
-Comprimir: tar -czvf empaquetado.tar.gz /carpeta/a/empaquetar/  
-Descomprimir: tar -xzvf archivo.tar.gz  
+Archivos .tar.gz:  
+Comprimir: tar -czvf empaquetado.tar.gz /carpeta/a/empaquetar/    
+Descomprimir: tar -xzvf archivo.tar.gz    
   
 Archivos .tar:  
 Empaquetar: tar -cvf paquete.tar /dir/a/comprimir/  
