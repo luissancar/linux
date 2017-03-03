@@ -12,7 +12,7 @@ zone "dam1.com" {
 // Resolución inversa
 
 
-zone "5.160.192.in-addr.arpa" {
+zone "5.168.192.in-addr.arpa" {
 	type master;
         file "/etc/bind/r1.192.168.5";
 };
