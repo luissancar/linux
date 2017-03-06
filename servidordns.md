@@ -1,5 +1,8 @@
 #  Configuración servidor DNS (bind9)
 
+## En /etc/bind/
+
+
 ## named.conf.local    
 
 ~~~
