@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>RAID</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><h1>RAID</h1>
+				RAID is a technology that is used to increase the performance
+				 and/or reliability of data storage.
+				 The abbreviation stands for Redundant Array
+				 of Inexpensive Disks.
+				  A RAID system consists of two or more drives working in parallel. These disks can be hard discs.
+			</section>
+				<section>
+					<h1>RAID</h1>
+					There are different RAID levels, each optimized for a specific situation. These are not standardized by an industry group or standardization committee. This explains why companies sometimes come up with their own unique numbers and implementations.
+				</section>
+
+
+
+				<section>
+					<h2>RAID level 0 – Striping</h2>
+					In a RAID 0 system data are split up into blocks that get written across all the drives in the array. By using multiple disks (at least 2) at the same time, this offers superior I/O performance.
+				</section>
+				<section>
+					<h1>RAID 0</h1>
+					<img src="raid0.png" height="400" >
+
+				</section>
+				<section>
+					<h1>RAID 0</h1>
+					<h3>Advantages</h3>
+					<ul >
+						<li>RAID 0 offers great performance, both in read and write operations. There is no overhead caused by parity controls.
+						<li>All storage capacity is used, there is no overhead.
+						<li>The technology is easy to implement.
+					</ul>
+				</section>
+				<section>
+					<h1>RAID 0</h1>
+					<h3>Disadvantages</h3>
+					<ul>
+						<li>RAID 0 is not fault-tolerant. If one drive fails, all data in the RAID 0 array are lost. It should not be used for mission-critical systems.
+					</ul>
+				</section>
+				<section>
+					<h2>RAID level 1 – Mirroring</h2>
+					Data are stored twice by writing them to both the data drive (or set of data drives) and a mirror drive (or set of drives). If a drive fails, the controller uses either the data drive or the mirror drive for data recovery and continues operation. You need at least 2 drives for a RAID 1 array.
+				</section>
+				<section>
+					<h1>RAID 1</h1>
+					<img src="raid1.png" height="400" >
+
+				</section>
+				<section>
+					<h2>RAID 1</h2>
+					<h3>Advantages</h3>
+					<ul >
+						<li>RAID 1 offers excellent read speed and a write-speed that is comparable to that of a single drive.
+						<li>In case a drive fails, data do not have to be rebuild, they just have to be copied to the replacement drive.
+						<li>RAID 1 is a very simple technology.
+					</ul>
+				</section>
+				<section>
+					<h3>RAID 1</h3>
+					<h5>Disadvantages</h5>
+					<ul>
+						<li>The main disadvantage is that the effective storage capacity is only half of the total drive capacity because all data get written twice.
+						<li>Software RAID 1 solutions do not always allow a hot swap of a failed drive. That means the failed drive can only be replaced after powering down the computer it is attached to. For servers that are used simultaneously by many people, this may not be acceptable. Such systems typically use hardware controllers that do support hot swapping.
+					</ul>
+				</section>
+				<section>
+					<h1>RAID level 5</h1>
+					RAID 5 is the most common secure RAID level. It requires at least 3 drives but can work with up to 16. Data blocks are striped across the drives and on one drive a parity checksum of all the block data is written.
+ 				  Using the parity data, the computer can recalculate the data of one of the other data blocks, should those data no longer be available.
+				</section>
+				<section>
+					<h1>RAID 5</h1>
+
+					<img src="raid5.gif" height="400" >
+
+			</section>
+			<section>
+				<h2>RAID 5</h2>
+				<h3>Advantages</h3>
+				<ul >
+					<li>Read data transactions are very fast while write data transactions are somewhat slower (due to the parity that has to be calculated).
+					<li>If a drive fails, you still have access to all data, even while the failed drive is being replaced and the storage controller rebuilds the data on the new drive.
+				</ul>
+			</section>
+			<section>
+				<h3>RAID 5</h3>
+				<h5>Disadvantages</h5>
+				<ul>
+					<li>Drive failures have an effect on throughput, although this is still acceptable.
+					<li>This is complex technology. If one of the disks in an array using 4TB disks fails and is replaced, restoring the data (the rebuild time) may take a day or longer, depending on the load on the array and the speed of the controller. If another disk goes bad during that time, data are lost forever.
+				</ul>
+			</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
