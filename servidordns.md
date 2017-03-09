@@ -152,8 +152,10 @@ Veamos como configurar BIND9 para disponer de un servidor DNS en una intranet, q
 Instalamos BIND9 y nos desplazamos a su directorio de configuración:  
 
 apt install bind9  
-cd /etc/bind/  
-Editamos named.conf.local y añadimos la zona “marblestation.homeip.net”, haciendo referencia a su fichero de configuración:  ~~~
+cd /etc/bind/    
+
+
+Editamos named.conf.local y añadimos la zona “marblestation.homeip.net”, haciendo referencia a su fichero de configuración:    ~~~
 
 zone "marblestation.homeip.net" {
     type master;
