@@ -155,7 +155,8 @@ apt install bind9
 cd /etc/bind/    
 
 
-Editamos named.conf.local y añadimos la zona “marblestation.homeip.net”, haciendo referencia a su fichero de configuración:    ~~~
+Editamos named.conf.local y añadimos la zona “marblestation.homeip.net”, haciendo referencia a su fichero de configuración:  
+~~~
 
 zone "marblestation.homeip.net" {
     type master;
