@@ -1,6 +1,6 @@
 # Servidor DHCP  
 
-Instalamos el demonio.  
+Instalamos el demonio:   
 
   apt-get install isc-dhcp-server  
   
@@ -28,5 +28,17 @@ subnet 192.168.5.0 netmask 255.255.255.0 {
 - option broadcast-address. La dirección de difusión.  
 - default-lease-time el tiempo en horas durante el que se reserva una dirección IP a cierto equipo.  
 - max-lease-time el tiempo máximo que se reservará una IP para un equipo.  
+
+Reiniciamos el servicio:  
+  service isc-dhcp-server restart 
   
+  
+# Comprobación  
+En un host que esté en la misma red:  
+Editamos el archivo /etc/dhcp/dhclient.conf  y añadimos:  
+  reject 192.168.1.1  
+Donde 192.168.1.1 es la ip de un servidor al cual no queremos conectarnos, esto obligará  a conectarse con nuestro servidor DHCP.  
+Hacemos ifconfig para ver si es correcta la IP.  
+  
+
   
