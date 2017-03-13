@@ -17,7 +17,7 @@ zone "dam1.com" {
 
 zone "5.168.192.in-addr.arpa" {
 	type master;
-        file "/etc/bind/r1.192.168.5";
+        file "/etc/bind/ri.192.168.5";
 };
 ~~~
 
