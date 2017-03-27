@@ -53,3 +53,29 @@ Reiniciamos el demonio.
 ~~~
 sudo service apache2 restart
 ~~~
+
+## Autentificación, Autorización y Control de Acceso  
+Necesitaremos crear un archivo de contraseñas. Éste archivo debería colocarlo en algún sitio no accesible mediante la Web.  
+Para crear un archivo de contraseñas, usaremos la utilidad htpasswd que viene con Apache. Para crear el archivo:  
+~~~
+sudo htpasswd -c /var/www/sitioa.com/passwords usuario1
+sudo htpasswd  /var/www/sitioa.com/passwords usuario2
+~~~    
+La opción '-c' se utiliza para crear el fichero.  
+Añadiremos  a nuestro fuchero de configuración:  
+~~~
+<Directory /var/www/sitioa.com/html>
+	AuthType Basic
+	AuthName "ACCESO RESTRINGIDO."
+	AuthUserFile /var/www/sitioa.com/passwords
+	Require user usuario1
+</Directory>
+<Directory /var/www/sitioa.com/html>        
+	Options Indexes FollowSymLinks MultiViews
+	AllowOverride  none
+	Order Allow,deny
+	allow from all
+</Directory>
+~~~  
+Reiniciamos el demonio y sólo tendrá acceso el usuario1.  
+Si sustituimos 'Require user usuario1' por 'Require valid-user ', tendrán acceso todos los usuarios del fichero passwords.  
