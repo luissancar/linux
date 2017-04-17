@@ -36,4 +36,4 @@ En el minuto 30
 De las 2 de la noche  
 De cada día del mes  
 De cada mes  
-Sólo si es viernes 
+Sólo si es lunes 
