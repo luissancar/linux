@@ -55,4 +55,14 @@ Las líneas que comienzan con # son ignoradas como en la mayoría de los archivo
   - nouser: especifica que el filesystem sólo puede ser montado por el usuario root y no por un usuario común.
   - sync: todas las escrituras al filesystem se hacen en el momento. Esto da mayor seguridad a los datos pero un menor rendimiento.
 - Quinta: esta columna indica a la utilidad dump si debe o no hacer backup del filesystem. Puede tomar dos valores: 0 y 1. Con 0 se indica que no se debe backupear, con 1 que sí se haga. Lógicamente, depende de que se tenga instalado y configurado dump, por lo que en la mayoría de los casos este campo es 0.
-- Sexta: en este caso se trata de una indicación para el fsck (comando que chequea el filesystem) y nuevamente se define con un valor numérico. Las posibilidades son 0, 1 y 2. El 0 indica que el filesystem no debe ser chequeado, mientras que el 1 y el 2 le dicen a fsck que sí lo chequee. La diferencia es que el 1 representa una prioridad mayor que el 2, por lo que debe utilizarse para el sistema raíz y el 2 para el resto de los sistemas de archivos.
+- Sexta: en este caso se trata de una indicación para el fsck (comando que chequea el filesystem) y nuevamente se define con un valor numérico. Las posibilidades son 0, 1 y 2. El 0 indica que el filesystem no debe ser chequeado, mientras que el 1 y el 2 le dicen a fsck que sí lo chequee. La diferencia es que el 1 representa una prioridad mayor que el 2, por lo que debe utilizarse para el sistema raíz y el 2 para el resto de los sistemas de archivos.  
+## mount umount
+Para montar manualmente una partición sería:  
+~~~
+mount punto de montaje
+~~~
+
+Para desmontar manualmente una partición sería:  
+~~~
+umount punto de montaje
+~~~
