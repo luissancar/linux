@@ -7,7 +7,9 @@ Para verlos, editaremos el fichero /etc/crontab
 ## FORMATO DE LAS TAREAS 
 
 Las tareas cron siguen una determinada sintaxis. Tienen 5 asteriscos seguidos del comando a ejecutar.
+~~~
 * * * * * root /bin/ejecutar/script.sh  
+~~~
 De izquierda a derecha, los asteriscos representan:  
 - Minutos: de 0 a 59.  
 - Horas: de 0 a 23.  
