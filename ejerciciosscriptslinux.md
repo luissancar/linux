@@ -23,4 +23,4 @@ Los scripts deben controlar todos los posibles errores, si el número de paráme
 - Mostramos menu, con productos para vender, luego nos pide que introduzcamos la opcion. luego mensaje que indica que introduzca moneda. Si ponemos precio exacto nos da mensaje, "Gracias buen provecho", si ponemos menos, nos diga falta.
 Si poner mas valor, nos indique el cambio con mensaje.  
 - Realizar un script que pida introducir la ruta de un directorio por teclado (Hay que validar que la variable introducida sea un directorio) nos diga cuantos archivos y cuantos directorios hay dentro de ese directorio.  
-- Realiza un script que introduzca numero por parametro y muestre tabla de multiplicar.  
+- Realiza un script que introduzca número por parametro y muestre tabla de multiplicar.  
