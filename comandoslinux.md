@@ -345,11 +345,12 @@ cdrecord –scanbus: escanear bus para identificar el canal scsi.
 dd if=/dev/hdc | md5sum: hacer funcionar un md5sum en un dispositivo, como un CD.  
 
 ## Trabajo con la RED ( LAN y Wi-Fi)
-ifconfig eth0: mostrar la configuración de una tarjeta de red Ethernet.  
-ifup eth0: activar una interface ‘eth0’.  
-ifdown eth0: deshabilitar una interface ‘eth0’.  
-ifconfig eth0 192.168.1.1 netmask 255.255.255.0: configurar una dirección IP.  
-ifconfig eth0 promisc: configurar ‘eth0’en modo común para obtener los paquetes (sniffing).  
+ifconfig eth0   ; ip addr show:  mostrar la configuración de una tarjeta de red Ethernet.  
+ifup eth0   ;    ip link set eth0 up : activar una interface ‘eth0’.    
+ifdown eth0  ; ip link set eth0 down : deshabilitar una interface ‘eth0’.   
+ifconfig eth0 192.168.1.1 netmask 255.255.255.0  ; ip address add 192.168.1.1/24 dev eth0 : configurar una dirección IP.  
+ip address del 192.168.1.1/dev dev eth0 :eliminar una  ip . 
+ifconfig eth0 promisc: configurar ‘eth0’en modo común para obtener los paquetes (sniffing).   
 dhclient eth0: activar la interface ‘eth0’ en modo dhcp.  
 route -n: mostrar mesa de recorrido.  
 route add -net 0/0 gw IP_Gateway: configurar entrada predeterminada.  
