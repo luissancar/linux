@@ -62,7 +62,7 @@ sudo htpasswd -c /var/www/sitioa.com/passwords usuario1
 sudo htpasswd  /var/www/sitioa.com/passwords usuario2
 ~~~    
 La opción '-c' se utiliza para crear el fichero.  
-Añadiremos  a nuestro fuchero de configuración:  
+Añadiremos  a nuestro fichero de configuración:  
 ~~~
 <Directory /var/www/sitioa.com/html>
 	AuthType Basic
