@@ -1,5 +1,7 @@
 #  Configuración servidor DNS (bind9)
 
+## instalar -> apt-get install bind9
+
 ## En /etc/bind/
 
 
