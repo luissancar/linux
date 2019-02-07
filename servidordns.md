@@ -97,7 +97,7 @@ $TTL 38400
 ~~~
 
 named-checkconf  
-named-checkzone dam1 rd.dam1.com  
+named-checkzone dam1.com rd.dam1.com  
 Añadir a /etc/resolv.conf nuestro dns  
 /etc/init.d/bind9 restart  
 host www.dam1.com  
