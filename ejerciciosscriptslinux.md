@@ -4,7 +4,6 @@ Los scripts deben controlar todos los posibles errores, si el número de paráme
 
 - Escriba un script que elimine un archivo o directorio pasado como parámetro, y le pregunte si está seguro de llevar a cabo la acción.  
 - Escribir un script que pueda mostrar información de un comando al ejecutar dicho script y pasar como parámetro el comando.  
-- Escribir un script que al pasarle por argumento un parámetro, determine si es archivo, directorio, o si el parámetro no existe.
 - Realiza un script que compruebe si el usuario actual del sistema es blas, si es así visualiza su nombre 5 veces, sino te despides de él amigablemente.
 - En un fichero tengo una palabra clave. Haz un script que muestre si dicha palabra es el parámetro pasado o no.  
 - Tenemos un menu principal:
@@ -24,3 +23,7 @@ Los scripts deben controlar todos los posibles errores, si el número de paráme
 Si poner mas valor, nos indique el cambio con mensaje.  
 - Realizar un script que pida introducir la ruta de un directorio por teclado (Hay que validar que la variable introducida sea un directorio) nos diga cuantos archivos y cuantos directorios hay dentro de ese directorio.  
 - Realiza un script que introduzca número por parámetro y muestre tabla de multiplicar.  
+- Script que  limpie todas las reglas, y de permiso a todas las conexiones.
+- Script que  limpie todas las reglas, y prohíba  cualquier conexión.
+- Tendrá 3 parámetros: red(ip), entrada-salida, aceptar-denegar. Dará estos permisos a iptables.
+- (Opcional): script que cree un router. Se debe explicar el funcionamiento.
