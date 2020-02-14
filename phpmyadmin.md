@@ -8,7 +8,7 @@ Instalación phpmyadmin en ubuntu desktop, incluyendo mysql-server, apache2 y ph
 
 # Instalacion mysql-server
 
-sudo apt install mysql-server. 
+sudo apt install mysql-server.     
 sudo mysql.      
 		mysql> CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'password';   
 		mysql> GRANT ALL PRIVILEGES ON *.* TO 'usuario'@'localhost' WITH GRANT OPTION;   
