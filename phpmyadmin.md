@@ -1,3 +1,4 @@
+
 # Instalación phpmyadmin en ubuntu desktop 18
 
 
