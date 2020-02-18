@@ -19,6 +19,7 @@ instalamos mysql y creamos un usuario con acceso a todas las bases de datos desd
 
 ## Instalación phpmyadmin
 ~~~
+sudo apt install apache2
 sudo apt install phpmyadmin  
 ~~~
 Instala automáticamente  phpmyadmin, mysql-server, apache2 y php.    
