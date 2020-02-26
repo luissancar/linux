@@ -24,11 +24,12 @@ Politicas ACCEPT -> acepta , DROP -> no acepta
 
 iptables -P INPUT ACCEPT  -> acepta todos los paquetes de entrada
 
-iptables -A INPUT -s 192.168.5.0/24  -j  ACCEPT
+iptables -A INPUT -i eth0 -s 192.168.5.0/24  -j  ACCEPT
 
 - -A -> añade regla a la cadena INPUT
 - -s  -> source procedentes  de la red 192.168.5.0/24
 - -j -> jump da permiso ACCEPT
+- -i -> en esta regla se utilizará la tarjeta eth0, si fuera OUTPUT utilizaremos -o, si sólo tenemos una tarjeta de red no es necesario. 
 
 iptables -A INPUT -s 192.168.5.0/24  -p tcp --dport 80 -j  DROP
 
