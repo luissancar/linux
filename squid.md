@@ -3,7 +3,7 @@ Un servidor proxy es un intermediario entre su dispositivo y Internet.
 
 Un servidor proxy puede permanecer en el router local,  donde ayuda a aumentar la eficiencia de la red, autenticar a los usuarios de la red y aplicar restricciones de contenido. No requieren de ningún tipo de configuración por parte del usuario.
 Squid es un programa que te permite realizar un proxy/caché con una gran variedad de configuraciones y usos.
-####instalación:
+#### instalación:
 
 ~~~
 sudo apt-get update
@@ -14,7 +14,7 @@ sudo apt-get install squid
 Ya tenemos instalado squid con la configuración básica (puerto 3128).
 Podemos configurar nuestro navegador para comprobar su funcionamiento. 
 
-####Configuración básica
+#### Configuración básica
 Editamos el fichero  /etc/squid/squid.conf
 
 
@@ -60,7 +60,7 @@ También puede definirse una Lista de Control de Acceso especificando un archivo
 acl permitidos src "/etc/squid/listas/permitidos"
 ~~~
 
-####Reglas de Control de Acceso.
+#### Reglas de Control de Acceso.
 Estas definen si se permite o deniega acceso hacia Squid. Se aplican a las Listas de Control de Acceso.
 La sintaxis básica de una regla de control de acceso es la siguiente:
 
@@ -69,7 +69,7 @@ http_access [deny o allow] [lista de control de acceso]
 ~~~
 
 
-####Ejemplo :
+#### Ejemplo :
 Sólo permite el acceso a nuestra red:
 
 ~~~
