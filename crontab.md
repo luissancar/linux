@@ -37,3 +37,24 @@ De las 2 de la noche
 De cada día del mes  
 De cada mes  
 Sólo si es lunes 
+
+
+~~~
+30 2 * * 1-3 /home/usertest/scripts/test1.sh
+~~~
+Ejecutar un script de lunes a miércoles a las 2:30 horas:
+
+~~~
+30 17 * * 1,5 /home/usuario/scripts/test1.sh
+~~~
+
+Se ejecutará a las 5:30 de la tarde todos los  lunes y viernes.
+
+
+~~~
+0,10,20,30,40,50 2 * * * /home/usertest/scripts/test1.sh
+# ó
+*/10 2 * * * /home/usertest/scripts/test1.sh
+~~~
+
+Ejecutar un script  cada 10 minutos desde las 2:00 horas durante una hora:
