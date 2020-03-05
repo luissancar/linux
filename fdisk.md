@@ -72,4 +72,4 @@ fdisk –l /dev/sdb
 ~~~
 
 
-Read more https://ayudalinux.com/fdisk-como-usarlo-en-linux/
+#######Read more https://ayudalinux.com/fdisk-como-usarlo-en-linux/
