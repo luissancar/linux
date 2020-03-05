@@ -1,4 +1,4 @@
-#Fdisk
+# Fdisk
 
 Es un comando utilizado para la gestión y administración del espacio en disco duro. Permite realizar diferentes acciones sobre el disco duro: 
 
@@ -9,7 +9,7 @@ Es un comando utilizado para la gestión y administración del espacio en disco 
 - Ver el contenido de un disco en especifico
 
 
-####Listar todas las particiones con fdisk
+#### Listar todas las particiones con fdisk
 
 Para obtener la lista de todas las particiones existentes dentro del sistema operativo, usaremos el comando fdisk acompañado del parámetro “-l”,
 
@@ -17,7 +17,7 @@ Para obtener la lista de todas las particiones existentes dentro del sistema ope
  fdisk –l /dev/sdb 
 ~~~
 
-####Crear una partición
+#### Crear una partición
 
  Accedemos a fdisk utilizando como argumento el disco sobre el cual vamos a trabajar.
 
@@ -35,7 +35,7 @@ Presionaremos “p” para una partición primaria, mientras que usaremos “e�
 
 Resulta importante resaltar que luego de hacer cualquier cambio con el comando fdisk, se debe finalizar escribiendo “w”, esto para confirmar la escritura de cada uno de los cambios.
 
-####Formatear una partición
+#### Formatear una partición
 Después de crear la partición, es necesaríodarle formato.
 
 ~~~
@@ -52,7 +52,7 @@ fdisk -s /dev/sdb5
 ~~~
 
 
-####Eliminar una partición
+#### Eliminar una partición
 Nos  ubicarnos en la unidad de disco donde está la partición que deseamos borrar.
 
 ~~~
@@ -64,7 +64,7 @@ Presionamos “d” (por delete) y a continuación nos solicitara el numero de p
 Lo ultimo por hacer es presionar “w” para confirmar los cambios, los cuales serán aplicados la siguiente vez que iniciemos el sistema.
 
 
-####Ver el contenido de un disco en especifico
+#### Ver el contenido de un disco en especifico
 Esta acción es muy sencilla y similar a listar todas las particiones del sistema. Utilizamos un argumento adicional que seria el nombre del disco correspondiente. Obteniendo algo como esto:
 
 ~~~
@@ -72,4 +72,4 @@ fdisk –l /dev/sdb
 ~~~
 
 
-Read more https://ayudalinux.com/fdisk-como-usarlo-en-linux/
+###### Read more https://ayudalinux.com/fdisk-como-usarlo-en-linux/
