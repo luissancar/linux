@@ -9,7 +9,8 @@ netmask máscara subred
 gateway puerta enlace
 dns-nameservers dns1 dns2 ..
 ~~~
-Ejemplo en  Debian 10
+Ejemplo en  Debian 10   
+
 La configuración de las interfaces de red está guardada en el archivo /etc/network/interfaces:
 ~~~
 /etc/network/interfaces
