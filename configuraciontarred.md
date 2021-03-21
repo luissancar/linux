@@ -34,6 +34,7 @@ iface eth0 inet static
         network 192.168.1.0
         broadcast 192.168.1.255
         gateway 192.168.1.1
+        dns-nameserver 192.168.5.10
 ~~~
 
 También es necesario indicar la dirección del servidor DNS. En esta configuración, el servidor DNS funciona en el router/modem ADSL, por lo que el parámetro para nameserver debe tener el valor 192.168.1.1, en el archivo/etc/resolv.conf:
