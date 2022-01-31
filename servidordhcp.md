@@ -29,6 +29,16 @@ subnet 192.168.5.0 netmask 255.255.255.0 {
 - default-lease-time el tiempo en horas durante el que se reserva una dirección IP a cierto equipo.  
 - max-lease-time el tiempo máximo que se reservará una IP para un equipo.  
 
+Editamos el fichero /etc/default/iscp-dhcp-server
+En la linea 
+
+INTERFACESv4=""
+
+Añadimos el nombre de la tarjeta de red:
+
+INTERFACESv4="enp0s3"
+
+
 Reiniciamos el servicio:  
   service isc-dhcp-server restart 
   
