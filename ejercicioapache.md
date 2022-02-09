@@ -6,4 +6,4 @@ Crear un servidor Apache con 4 virtual host:
 - www.chip555.org -> mostrará la imagen del chip 555. Sólo tendrán acceso los usuarios del fichero de password creado.
 
 Crear una máquina con el servidor Apache y el servidor dns necesario.
-Crear otra máquina con un entorno gráfico para comprobar el correcto funcionamiento.
+Crear otra máquina con un entorno gráfico para comprobar el correcto funcionamiento, ésta debe ser dhcp.
