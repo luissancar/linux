@@ -7,7 +7,7 @@ iface identificador_t_red inet {static / dhcp}  // si es dhcp, aquí termina la 
 address ip
 netmask máscara subred
 gateway puerta enlace
-dns-nameservers dns1 dns2 ..
+dns-nameserver dns1 dns2 ..
 ~~~
 Ejemplo en  Debian 10   
 
