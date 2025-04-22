@@ -29,7 +29,7 @@ subnet 192.168.5.0 netmask 255.255.255.0 {
 - default-lease-time el tiempo en horas durante el que se reserva una dirección IP a cierto equipo.  
 - max-lease-time el tiempo máximo que se reservará una IP para un equipo.  
 
-Editamos el fichero /etc/default/iscp-dhcp-server
+Editamos el fichero /etc/default/isc-dhcp-server
 En la linea 
 
 INTERFACESv4=""
