@@ -4,10 +4,10 @@ Instalamos el demonio:
 
   apt-get install isc-dhcp-server  
   
-Editamos el archivo isc-dhcp-server, ubicado en /etc/default/.  
+Editamos el archivo isc-dhcp-server, ubicado en /etc/default/
 Donde pone INTERFACES, entre las comillas, vamos a escribir el nombre de la tarjeta de red que se va a encargar de asignar direcciones IP.  
 
-Abrimos el archivo de configuración /etc/dhcp/dhcpd.conf.  
+Abrimos el archivo de configuración /etc/dhcp/dhcpd.conf 
 ~~~
 subnet 192.168.5.0 netmask 255.255.255.0 {
   range 192.168.5.50 192.168.5.100;
